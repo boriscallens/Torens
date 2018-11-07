@@ -1,0 +1,184 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 14.0.23107.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{486A7D2C-1F70-4DE6-A02D-03EDB093C44E}"
+	ProjectSection(XenkoPackage) = preProject
+		Presentation/Torens.xkpkg = Presentation/Torens.xkpkg
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Torens.Windows", "Presentation\Torens.Windows\Torens.Windows.csproj", "{56842AA0-C9D1-4AC8-B989-D096FA92B72F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Torens.Game", "Presentation\Torens.Game\Torens.Game.csproj", "{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1C1C3702-A522-4611-B686-6399A9D33062}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{653D97DA-605F-4D71-AC39-D0ADFF31DDDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{51E1AA66-FB08-4747-9D2B-FD5A515A6C9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Torens.Application", "Core\Torens.Application\Torens.Application.csproj", "{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Torens.Domain", "Core\Torens.Domain\Torens.Domain.csproj", "{E6340F34-AC02-4452-88AB-5198C597D95E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DB1C238B-4930-48FA-BEA0-24DCD585A35F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toresn.Application", "Test\Toresn.Application\Toresn.Application.csproj", "{C4168C45-A546-4F40-813D-E2044943E9A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AppStore|Any CPU = AppStore|Any CPU
+		AppStore|Mixed Platforms = AppStore|Mixed Platforms
+		AppStore|Windows = AppStore|Windows
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Windows = Debug|Windows
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Windows = Release|Windows
+		Testing|Any CPU = Testing|Any CPU
+		Testing|Mixed Platforms = Testing|Mixed Platforms
+		Testing|Windows = Testing|Windows
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.AppStore|Windows.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.AppStore|Windows.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Windows.Build.0 = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Debug|Windows.Deploy.0 = Debug|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Windows.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Windows.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Release|Windows.Deploy.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Testing|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Testing|Mixed Platforms.Build.0 = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Testing|Windows.ActiveCfg = Release|Any CPU
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F}.Testing|Windows.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.AppStore|Windows.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.AppStore|Windows.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Debug|Windows.Build.0 = Debug|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Release|Windows.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Release|Windows.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Testing|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Testing|Mixed Platforms.Build.0 = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Testing|Windows.ActiveCfg = Release|Any CPU
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A}.Testing|Windows.Build.0 = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.AppStore|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.AppStore|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.AppStore|Windows.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.AppStore|Windows.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Debug|Windows.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Release|Windows.ActiveCfg = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Release|Windows.Build.0 = Release|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Testing|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Testing|Any CPU.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Testing|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Testing|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Testing|Windows.ActiveCfg = Debug|Any CPU
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE}.Testing|Windows.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.AppStore|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.AppStore|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.AppStore|Windows.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.AppStore|Windows.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Debug|Windows.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Release|Windows.ActiveCfg = Release|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Release|Windows.Build.0 = Release|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Testing|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Testing|Any CPU.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Testing|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Testing|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Testing|Windows.ActiveCfg = Debug|Any CPU
+		{E6340F34-AC02-4452-88AB-5198C597D95E}.Testing|Windows.Build.0 = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.AppStore|Windows.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.AppStore|Windows.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Debug|Windows.Build.0 = Debug|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Release|Windows.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Release|Windows.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Testing|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Testing|Mixed Platforms.Build.0 = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Testing|Windows.ActiveCfg = Release|Any CPU
+		{C4168C45-A546-4F40-813D-E2044943E9A0}.Testing|Windows.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56842AA0-C9D1-4AC8-B989-D096FA92B72F} = {486A7D2C-1F70-4DE6-A02D-03EDB093C44E}
+		{0837B494-8A9D-4AB1-9FA1-57A38190DE9A} = {486A7D2C-1F70-4DE6-A02D-03EDB093C44E}
+		{6A3E8C7C-BA56-4CF8-BAF3-6C6E7B06F5DE} = {653D97DA-605F-4D71-AC39-D0ADFF31DDDF}
+		{E6340F34-AC02-4452-88AB-5198C597D95E} = {653D97DA-605F-4D71-AC39-D0ADFF31DDDF}
+		{C4168C45-A546-4F40-813D-E2044943E9A0} = {DB1C238B-4930-48FA-BEA0-24DCD585A35F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {362EE01A-0E7A-482F-91A5-3F09D273EA9B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+!PrefabAsset
+Id: 8825a80c-5693-458a-bd8b-9edeb393252a
+SerializedVersion: {Xenko: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 6e206028-3d50-42bc-b196-901410f3423a
+    Parts:
+        -   Entity:
+                Id: 6e206028-3d50-42bc-b196-901410f3423a
+                Name: Placeholder
+                Components:
+                    10d9ccb8212c8c12d900e86b5cbf7d0c: !TransformComponent
+                        Id: 81db0faf-2d08-4884-addb-2591d9f56fe5
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    eed1d90fb7ae87605ab910cb89b00500: !ModelComponent
+                        Id: 665d5059-0f53-47a1-99d1-aa7471a7a38e
+                        Model: f4bc9ec3-7222-4781-9ec2-b53641f5d571:GroundTiles/PlaceholderModel
+                        Materials:
+                            cc6b8ae9d8529584c615a1c25e61d467~0: 3d417648-1153-466f-a792-e38eb01b9a97:GroundTiles/PlaceholderMaterial

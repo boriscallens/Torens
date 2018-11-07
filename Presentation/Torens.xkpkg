@@ -1,0 +1,43 @@
+!Package
+Id: 486a7d2c-1f70-4de6-a02d-03edb093c44e
+SerializedVersion: {Assets: 0.0.4}
+Meta:
+    Name: Torens
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: Torens.Presentation
+    Dependencies:
+        -   Name: Xenko
+            Version: 3.0.0.6
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: Torens.Game/Effects
+        ResourceFolders:
+            - Resources
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 0837b494-8a9d-4ab1-9fa1-57a38190de9a
+                Location: Torens.Game/Torens.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        ResourceFolders: []
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 56842aa0-c9d1-4ac8-b989-d096fa92b72f
+                Location: Torens.Windows/Torens.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []
