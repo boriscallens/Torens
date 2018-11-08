@@ -14,14 +14,15 @@ namespace Torens.Presentation
         {
             base.OnSystemAdd();
             _mediator = Services.GetService<IMediator>();
-            Enabled = _mediator != null;
         }
 
         public override void Update(GameTime time)
         {
+            if (_mediator == null) return;
+
             var tilesById = this.ComponentDatas.Keys.ToDictionary(tile => tile.Id, tile => tile);
             var qry = new GetChangedTilesQuery(time.Elapsed, tilesById.Keys.ToArray());
-            var tilesViewModel = _mediator.Send(qry);
+            var tilesViewModel = _mediator.Send(qry).GetAwaiter().GetResult();
 
             foreach (var tile in tilesViewModel.Tiles)
             {

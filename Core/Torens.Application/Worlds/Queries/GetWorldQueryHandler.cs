@@ -1,12 +1,14 @@
-﻿using MediatR;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
 
 namespace Torens.Application.Worlds.Queries
 {
     public class GetWorldQueryHandler : IRequestHandler<GetWorldQuery, WorldViewModel>
     {
-        public WorldViewModel Handle(GetWorldQuery message)
+        public Task<WorldViewModel> Handle(GetWorldQuery request, CancellationToken cancellationToken)
         {
-            return new WorldViewModel();
+            return Task.FromResult(new WorldViewModel());
         }
     }
 }

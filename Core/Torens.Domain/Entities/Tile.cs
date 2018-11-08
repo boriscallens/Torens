@@ -5,7 +5,8 @@ namespace Torens.Domain.Entities
 {
     public class Tile
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
         public GroundTypes Type { get; private set; }
+        public DateTime LastChanged { get; set; }
     }
 }

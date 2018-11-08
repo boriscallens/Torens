@@ -6,13 +6,13 @@ namespace Torens.Application.Tiles.Queries
 {
     public class GetChangedTilesQuery:  IRequest<TilesViewModel>
     {
-        private readonly IEnumerable<Guid> _tileIds;
-        private readonly TimeSpan _time;
+        public IEnumerable<Guid> TileIds { get; }
+        public TimeSpan Since { get; }
 
-        public GetChangedTilesQuery(TimeSpan time, params Guid[] tileIds)
+        public GetChangedTilesQuery(TimeSpan since, params Guid[] tileIds)
         {
-            _tileIds = tileIds;
-            _time = time;
+            TileIds = tileIds;
+            Since = since;
         }
     }
 }

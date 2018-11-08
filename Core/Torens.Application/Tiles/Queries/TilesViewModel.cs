@@ -5,6 +5,11 @@ namespace Torens.Application.Tiles.Queries
 {
     public class TilesViewModel
     {
-        public IEnumerable<Tile> Tiles { get; } = new List<Tile>();
+        public TilesViewModel(IEnumerable<Tile> tiles)
+        {
+            Tiles = tiles;
+        }
+
+        public IEnumerable<Tile> Tiles { get; }
     }
 }
