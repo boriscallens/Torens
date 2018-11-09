@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using Torens.Application.Tiles.Queries;
-using Torens.Domain;
+using Torens.Domain.ValueObjects;
 using Torens.Infrastructure.Logging;
 
 namespace Torens.Infrastructure
@@ -13,7 +13,7 @@ namespace Torens.Infrastructure
         public static ContainerBuilder GetBuilder()
         {
             var applicationMarkerType = typeof(GetChangedTilesQuery);
-            var domainMarkerType = typeof(MachineTimeProvider);
+            var domainMarkerType = typeof(GroundTypes);
             var mediatrModule = new MediatrModule(applicationMarkerType);
             var loggingModule = new Log4NetModule();
 

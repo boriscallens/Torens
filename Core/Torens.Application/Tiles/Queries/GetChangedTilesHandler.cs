@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
+using Torens.Application.Repositories;
 using Torens.Domain;
 
 namespace Torens.Application.Tiles.Queries

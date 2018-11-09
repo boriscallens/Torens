@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Torens.Application\Torens.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Torens.Infrastructure\Torens.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Presentation\Torens.Windows\Torens.Windows.csproj" />
   </ItemGroup>
 
 </Project>

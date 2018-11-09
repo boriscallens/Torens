@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using NSubstitute;
+using Torens.Application.Repositories;
 using Torens.Application.Tiles.Queries;
 using Torens.Domain;
 using Torens.Domain.Entities;
+using Torens.Domain.ValueObjects;
 using Xunit;
 
 namespace Torens.Application.Test
@@ -37,15 +39,13 @@ namespace Torens.Application.Test
             var tilesRepository = Substitute.For<ITilesRepository>();
             var timeProvider = Substitute.For<ITimeProvider>();
 
-            var now = new DateTime(2000,1,1);
+            var now = new DateTime(2000, 1, 1);
             var aFrameAgo = now - frameTimespan;
-
             timeProvider.Now.Returns(now);
-            tilesRepository.Tiles.Returns(new List<Tile> { new Tile
-            {
-                Id = tileId,
-                LastChanged = aFrameAgo
-            }});
+
+            var chunk = new Chunk(new Position(), 1);
+            var tile = new Tile(tileId, chunk, new Position(), aFrameAgo);
+            tilesRepository.Tiles.Returns(new[] { tile });
 
             var qry = new GetChangedTilesQuery(frameTimespan, tileId);
             var handler = new GetChangedTilesHandler(tilesRepository, timeProvider);

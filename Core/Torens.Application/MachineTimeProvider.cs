@@ -1,6 +1,7 @@
 ﻿using System;
+using Torens.Domain;
 
-namespace Torens.Domain
+namespace Torens.Application
 {
     public class MachineTimeProvider : ITimeProvider
     {

@@ -6,10 +6,6 @@ namespace Torens.Infrastructure.Logging
 {
     public class Log4NetModule: Module
     {
-        public Log4NetModule()
-        {
-        }
-
         protected override void Load(ContainerBuilder builder)
         {
             base.Load(builder);

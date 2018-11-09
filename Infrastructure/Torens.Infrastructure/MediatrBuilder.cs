@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using Autofac;
 using MediatR;
-using Torens.Infrastructure;
 
-namespace Torens.Presentation
+namespace Torens.Infrastructure
 {
     public class MediatrBuilder
     {

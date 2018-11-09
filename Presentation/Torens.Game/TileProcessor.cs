@@ -20,7 +20,7 @@ namespace Torens.Presentation
         {
             if (_mediator == null) return;
 
-            var tilesById = this.ComponentDatas.Keys.ToDictionary(tile => tile.Id, tile => tile);
+            var tilesById = ComponentDatas.Keys.ToDictionary(tile => tile.Id, tile => tile);
             var qry = new GetChangedTilesQuery(time.Elapsed, tilesById.Keys.ToArray());
             var tilesViewModel = _mediator.Send(qry).GetAwaiter().GetResult();
 
