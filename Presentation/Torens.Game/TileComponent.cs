@@ -10,7 +10,6 @@ namespace Torens.Presentation
     [Display("Tile", Expand = ExpandRule.Once)]
     public class TileComponent : EntityComponent
     {
-        
         public GroundTypes Type { get; set; }
         public int Column { get; set; }
         public int Row { get; set; }
