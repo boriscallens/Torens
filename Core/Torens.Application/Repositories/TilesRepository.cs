@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Torens.Application.Tiles.Commands;
@@ -10,9 +11,9 @@ namespace Torens.Application.Repositories
     public class TilesRepository : ITilesRepository
     {
         private readonly ITimeProvider _timeProvider;
-        private readonly List<Tile> _tiles = new List<Tile>();
+        private readonly Dictionary<Guid, Tile> _tiles = new Dictionary<Guid, Tile>();
 
-        public IEnumerable<Tile> Tiles => _tiles;
+        public IDictionary<Guid, Tile> Tiles => _tiles;
 
         public TilesRepository(ITimeProvider timeProvider)
         {
@@ -21,13 +22,17 @@ namespace Torens.Application.Repositories
 
         public Task<List<Tile>> AddTiles(CreateTilesCommand command)
         {
+            var now = _timeProvider.Now;
             var newTiles = command.TilePositions.Select(position => new Tile(
-                command.Chunk,
-                position,
-                _timeProvider.Now))
+                    command.Chunk,
+                    position,
+                    now))
                 .ToList();
 
-            _tiles.AddRange(newTiles);
+            foreach (var newTile in newTiles)
+            {
+                _tiles.Add(newTile.Id, newTile);
+            }
 
             return Task.FromResult(newTiles);
         }

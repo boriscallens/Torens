@@ -18,6 +18,7 @@ Hierarchy:
                         Children: {}
                     eed1d90fb7ae87605ab910cb89b00500: !ModelComponent
                         Id: 665d5059-0f53-47a1-99d1-aa7471a7a38e
+                        Enabled: false
                         Model: f4bc9ec3-7222-4781-9ec2-b53641f5d571:GroundTiles/PlaceholderModel
                         Materials:
                             cc6b8ae9d8529584c615a1c25e61d467~0: 3d417648-1153-466f-a792-e38eb01b9a97:GroundTiles/PlaceholderMaterial

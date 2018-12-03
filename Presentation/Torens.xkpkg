@@ -40,5 +40,4 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets:
-    - 8825a80c-5693-458a-bd8b-9edeb393252a:GroundTiles/PlaceholderPrefab
+RootAssets: []

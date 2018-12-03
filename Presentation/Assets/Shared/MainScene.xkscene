@@ -26,8 +26,8 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: ee168d2f-107c-42a2-bbea-651f96e5288e
-                    18f7f9f562bc7529086c3d25930de2fa: !Torens.Presentation.BasicCameraController,Torens.Game
-                        Id: 9308a279-f17e-494e-91cc-f2c4e4ffb865
+                    f05b9826b0394123b4b9d2a8c244882a: !Torens.Presentation.BasicCameraController,Torens.Game
+                        Id: 9a8b7d1d-7d9d-4f50-9856-c60edfb6709e
                         KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
                         TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
                         SpeedFactor: 5.0
@@ -86,7 +86,10 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    2974d67f24d7611d37564e388c27c630: !WorldComponent
-                        Id: 773dd0cb-4578-48c4-acf1-7f88b3031a9a
-                        WorldSize: 2
-                        ChunkSize: 10
+                    1fb2bc2129144ceedcc8b8d050d583ff: !WorldComponent
+                        Id: 53cc7251-09ac-4dc1-a253-090388431963
+                        WorldSize: 1
+                        ChunkSize: 1
+                        Chunks:
+                            fad55c9e7a639d1b5dfd27a31a209e6f:
+                                Position: {X: 0.0, Y: 0.0, Z: 0.0}

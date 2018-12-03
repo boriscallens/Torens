@@ -22,7 +22,13 @@ namespace Torens.Presentation
             _tilePrefab = _tilePrefab ?? _contentManager.Load<Prefab>("GroundTiles/PlaceholderPrefab");
 
             var entity = _tilePrefab.Instantiate()[0];
-            entity.Transform.Position = new Vector3(tile.Position.Column, tile.Position.Layer, tile.Position.Row);
+            var tileComponent = entity.Components.Get<TileComponent>();
+            tileComponent.Id = tile.Id;
+            tileComponent.Column = tile.Position.Column;
+            tileComponent.Row = tile.Position.Row;
+            tileComponent.Type = tile.Type;
+
+            // entity.Transform.Position = new Vector3(tile.Position.Column, tile.Position.Layer, tile.Position.Row);
 
             return entity;
         }
