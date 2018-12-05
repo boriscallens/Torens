@@ -36,6 +36,7 @@ namespace Torens.Presentation
 
         public override void Start()
         {
+            
             base.Start();
 
             // Default up-direction

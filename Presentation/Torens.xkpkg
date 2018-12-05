@@ -40,4 +40,5 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets: []
+RootAssets:
+    - 26213d4e-70ce-414d-b87c-1f94e386ccc8:ChunkPrefab

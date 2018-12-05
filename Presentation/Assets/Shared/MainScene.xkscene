@@ -93,3 +93,7 @@ Hierarchy:
                         Chunks:
                             fad55c9e7a639d1b5dfd27a31a209e6f:
                                 Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                            dacfd15d2e03e4658f4864444098efc2:
+                                Position: {X: 1.0, Y: 0.0, Z: 0.0}
+                            05c6216653a48d34e90a3c3453d2de19:
+                                Position: {X: 0.0, Y: 1.0, Z: 0.0}

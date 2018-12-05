@@ -11,9 +11,9 @@ namespace Torens.Presentation
             
             using (var game = new Game())
             {
-                var tileFactory = new TileFactory(game.Services);
+                var chunkFactory = new ChunkFactory(game.Services);
                 game.Services.AddService(mediatr);
-                game.Services.AddService(tileFactory);
+                game.Services.AddService(chunkFactory);
                 game.Run();
             }
         }

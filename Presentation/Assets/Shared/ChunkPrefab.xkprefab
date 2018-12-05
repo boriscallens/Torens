@@ -1,0 +1,40 @@
+!PrefabAsset
+Id: 26213d4e-70ce-414d-b87c-1f94e386ccc8
+SerializedVersion: {Xenko: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 4e538223-1836-4b6a-8e0b-5955ba25c80c
+    Parts:
+        -   Entity:
+                Id: 4e538223-1836-4b6a-8e0b-5955ba25c80c
+                Name: Chunk
+                Components:
+                    4359fdb621b7a8ea9e8a182d3af8ebe0: !TransformComponent
+                        Id: 58699f2b-a7dc-45f2-86f6-f400df3d0b4e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    58ebc00b080ea365b36af66781cd6223: !ChunkComponent
+                        Id: 0f4eb628-3a8d-4851-ae7d-dbb04e00f016
+                    df175efb67713a915d1b0e0ea42f2be1: !ModelComponent
+                        Id: 784e1676-2334-4600-a01f-e32fac6d7220
+                        Model: cfcdd30d-3f13-4f82-80ec-2d25e33ac02b:Cube
+                        Materials:
+                            0241e82101411afe422fe8af55df1459~0: 3d417648-1153-466f-a792-e38eb01b9a97:GroundTiles/PlaceholderMaterial
+                    abc159f9ef200f5fec2ac4195ebc4338: !StaticColliderComponent
+                        Id: d2b00e5f-28ce-47fd-b010-66b87a6cb876
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            38a0bfd9590269e8ca8cf70eeb146712: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
