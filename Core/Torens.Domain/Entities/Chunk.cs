@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Torens.Domain.ValueObjects;
+﻿using Torens.Domain.ValueObjects;
 
 namespace Torens.Domain.Entities
 {
@@ -8,9 +7,8 @@ namespace Torens.Domain.Entities
     /// </summary>
     public class Chunk
     {
-        public IEnumerable<Tile> Tiles { get; set; } = new List<Tile>();
         public Position Position { get; set; }
 
-        public Chunk(Position position, int size){}
+        public Chunk(Position position){}
     }
 }

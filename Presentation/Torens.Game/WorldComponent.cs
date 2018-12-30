@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Torens.Presentation.ViewModels;
+using Torens.Game.ViewModels;
 using Xenko.Core;
 using Xenko.Engine;
 using Xenko.Engine.Design;
 
-namespace Torens.Presentation
+namespace Torens.Game
 {
     [DataContract("WorldComponent")]
     [DefaultEntityComponentProcessor(typeof(WorldProcessor), ExecutionMode = ExecutionMode.Runtime)]

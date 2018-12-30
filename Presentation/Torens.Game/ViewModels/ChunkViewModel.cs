@@ -1,7 +1,7 @@
 ﻿using Xenko.Core;
 using Xenko.Core.Mathematics;
 
-namespace Torens.Presentation.ViewModels
+namespace Torens.Game.ViewModels
 {
     [DataContract("ChunkViewModel")]
     [Display("Chunk")]

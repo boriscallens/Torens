@@ -4,7 +4,7 @@ using Xenko.Core.Mathematics;
 using Xenko.Engine;
 using Xenko.Input;
 
-namespace Torens.Presentation
+namespace Torens.Game
 {
     /// <summary>
     /// A script that allows to move and rotate an entity through keyboard, mouse and touch input to provide basic camera navigation.
@@ -36,7 +36,6 @@ namespace Torens.Presentation
 
         public override void Start()
         {
-            
             base.Start();
 
             // Default up-direction

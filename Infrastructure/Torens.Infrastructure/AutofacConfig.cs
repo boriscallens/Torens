@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using Autofac;
-using Torens.Application.Tiles.Queries;
+using Torens.Application.Worlds.Queries;
 using Torens.Domain.ValueObjects;
 using Torens.Infrastructure.Logging;
 
@@ -12,7 +12,7 @@ namespace Torens.Infrastructure
     {
         public static ContainerBuilder GetBuilder()
         {
-            var applicationMarkerType = typeof(GetChangedTilesQuery);
+            var applicationMarkerType = typeof(GetWorldQuery);
             var domainMarkerType = typeof(GroundTypes);
             var mediatrModule = new MediatrModule(applicationMarkerType);
             var loggingModule = new Log4NetModule();

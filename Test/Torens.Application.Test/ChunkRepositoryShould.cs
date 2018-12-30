@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using NSubstitute;
 using Torens.Application.Chunks.Commands;
 using Torens.Application.Repositories;
 using Torens.Domain.Entities;
@@ -15,8 +16,8 @@ namespace Torens.Application.Test
         public async void CreateChunks()
         {
             var repo = new ChunkRepository();
-            var positions = new[] { new Position(0, 0, 0), new Position(0, 0, 1) };
-            var command = new CreateChunksCommand(1, positions);
+            var positions = new[] { Position.Zero, new Position(0, 0, 1) };
+            var command = new CreateChunksCommand(positions);
 
             var chunk = await repo.AddChunks(command, CancellationToken.None);
 
@@ -27,8 +28,8 @@ namespace Torens.Application.Test
         public async void CreateChunkWithCorrectPosition()
         {
             var repo = new ChunkRepository();
-            var position = new Position(0, 0, 0);
-            var command = new CreateChunksCommand(1, position);
+            var position = Position.Zero;
+            var command = new CreateChunksCommand(position);
 
             var chunk = await repo.AddChunks(command, CancellationToken.None);
 

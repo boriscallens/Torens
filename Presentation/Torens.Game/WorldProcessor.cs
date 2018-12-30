@@ -1,9 +1,8 @@
 using MediatR;
-using System.Linq;
 using Xenko.Core.Annotations;
 using Xenko.Engine;
 
-namespace Torens.Presentation
+namespace Torens.Game
 {
 
     public class WorldProcessor: EntityProcessor<WorldComponent>
@@ -22,11 +21,10 @@ namespace Torens.Presentation
         {
             base.OnEntityComponentAdding(entity, component, data);
             
-            var chunks = data.Chunks
-                .Select(chunkData => chunkData.Position * data.ChunkSize)
-                .Select(position => _chunkFactory.Create(position));
+            //var chunks = data.Chunks
+            //    .Select(chunkData => _chunkFactory.Create(chunkData));
 
-            entity.Scene.Entities.AddRange(chunks);
+            //entity.Scene.Entities.AddRange(chunks);
         }
     }
 }

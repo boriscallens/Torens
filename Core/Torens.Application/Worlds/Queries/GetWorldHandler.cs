@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Torens.Application.Chunks.Commands;
-using Torens.Application.Tiles.Commands;
 using Torens.Domain.ValueObjects;
 
 namespace Torens.Application.Worlds.Queries
@@ -32,17 +31,11 @@ namespace Torens.Application.Worlds.Queries
                                  from z in tilesRange
                                  select new Position(x, 0, z);
 
-            var createChunksCommand = new CreateChunksCommand(request.ChunkSize, chunkPositions.ToArray());
+            var createChunksCommand = new CreateChunksCommand(chunkPositions.ToArray());
             var chunksViewModel = await _mediator.Send(createChunksCommand, cancellationToken);
-
-            var tilesTasks = chunksViewModel.Chunks
-                .Select(chunk => new CreateTilesCommand(chunk, tilesPositions.ToArray()))
-                .Select(createTilesCommand => _mediator.Send(createTilesCommand, cancellationToken));
-            var tilesViewModels = await Task.WhenAll(tilesTasks);
 
             return new WorldViewModel
             {
-                Tiles = tilesViewModels.SelectMany(tilesViewModel => tilesViewModel.Tiles)
             };
         }
     }

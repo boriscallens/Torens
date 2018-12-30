@@ -2,6 +2,8 @@
 {
     public struct Position
     {
+        public static Position Zero => new Position(0, 0, 0);
+
         public int Column;
         public int Layer;
         public int Row;

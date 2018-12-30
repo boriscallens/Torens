@@ -1,9 +1,12 @@
+using Torens.Game.ViewModels;
 using Xenko.Core;
-using Xenko.Core.Mathematics;
 using Xenko.Core.Serialization.Contents;
 using Xenko.Engine;
+using Xenko.Graphics;
+using Xenko.Rendering;
+using Buffer = Xenko.Graphics.Buffer;
 
-namespace Torens.Presentation
+namespace Torens.Game
 {
     public class ChunkFactory
     {
@@ -15,22 +18,42 @@ namespace Torens.Presentation
         {
             _serviceRegistry = serviceRegistry;
         }
-        public Entity Create(Vector3 position)
+
+        internal Entity Create(ChunkViewModel chunkData)
         {
             _contentManager = _contentManager ?? _serviceRegistry.GetService<IContentManager>();
             _chunkPrefab = _chunkPrefab ?? _contentManager.Load<Prefab>("ChunkPrefab");
 
             var entity = _chunkPrefab.Instantiate()[0];
-            entity.Components.Get<TransformComponent>().Position = position;
-            //var chunkComponent = entity.Components.Get<TileComponent>();
-            //tileComponent.Id = tile.Id;
-            //tileComponent.Column = tile.Position.Column;
-            //tileComponent.Row = tile.Position.Row;
-            //tileComponent.Type = tile.Type;
+            var modelComponent = entity.Components.Get<ModelComponent>();
+            var transformComponent = entity.Components.Get<TransformComponent>();
 
-            // entity.Transform.Position = new Vector3(tile.Position.Column, tile.Position.Layer, tile.Position.Row);
+            transformComponent.Position = chunkData.Position;
+            modelComponent.Model = CreateModel();
 
             return entity;
+        }
+
+        private Model CreateModel()
+        {
+            // https://doc.xenko.com/latest/en/manual/scripts/create-a-model-from-code.html
+            var indexBuffer = new Buffer();
+
+            var indexBufferBinding = new IndexBufferBinding(indexBuffer, true, 10);
+            var vertexBufferBinding = new VertexBufferBinding();
+            VertexBufferBinding[] vertexBufferBindings = { vertexBufferBinding };
+
+            var meshDraw = new MeshDraw
+            {
+                VertexBuffers = vertexBufferBindings,
+                IndexBuffer = indexBufferBinding
+            };
+            ParameterCollection parms = null;
+            var mesh = new Xenko.Rendering.Mesh(meshDraw, parms);
+
+            var model = new Model { mesh };
+
+            return model;
         }
     }
 }
