@@ -12,7 +12,7 @@ namespace Torens.Domain.Entities
         {
             Seed = new Seed();
 
-            var position = new Position();
+            var position = ChunkPosition.Zero;
             Chunks = new List<Chunk> {new Chunk(position)};
         }
     }

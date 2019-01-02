@@ -6,11 +6,11 @@ namespace Torens.Application.Chunks.Commands
 {
     public class CreateChunksCommand : IRequest<CreateChunksViewModel>
     {
-        public CreateChunksCommand(params Position[] chunkPositions)
+        public CreateChunksCommand(params ChunkPosition[] chunkPositions)
         {
             ChunkPositions = chunkPositions;
         }
 
-        public IEnumerable<Position> ChunkPositions { get; }
+        public ChunkPosition[] ChunkPositions { get; }
     }
 }

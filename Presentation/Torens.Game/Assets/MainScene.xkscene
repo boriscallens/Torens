@@ -13,7 +13,6 @@ Hierarchy:
         - ref!! 108f32bc-98cf-44aa-a000-79172fb367de
         - ref!! c60e4867-fee6-43ba-ae5b-45f10cb5e65c
         - ref!! 4805bc05-6fe3-48b5-a274-e55f76876518
-        - ref!! 870e106e-e37e-4d9c-951d-91cbd2b1a991
     Parts:
         -   Entity:
                 Id: 01be698d-43e9-41d5-9fa6-fe991b1576e5
@@ -84,6 +83,10 @@ Hierarchy:
                         Children: {}
                     26378204a3df83d9e1719d87a587057b: !ChunkComponent
                         Id: f8c0df29-5256-4a04-bc12-22ef46171802
+                        Position:
+                            Column: 0
+                            Layer: 0
+                            Row: 0
         -   Entity:
                 Id: 49adb1ba-084f-4f81-b2eb-dff5825f5625
                 Name: Ground
@@ -98,19 +101,6 @@ Hierarchy:
                         Id: 758580ff-0c55-4334-9e6c-e13c6df3d09b
                         Model: 5a28a481-2fe4-4cfb-8e46-4485b58bf77a:Ground
                         Materials: {}
-        -   Folder: Chunks
-            Entity:
-                Id: 870e106e-e37e-4d9c-951d-91cbd2b1a991
-                Name: Chunk2
-                Components:
-                    68a0ff0856880c40f84a641ad3502cdf: !TransformComponent
-                        Id: 17f0ca08-da5e-4ea8-a928-f2c618bf68d6
-                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    bc546a460bf86f47ecece8e420fa4a1c: !ChunkComponent
-                        Id: 2e86fd75-e1f1-41cc-bda7-8f3f40ba9b47
         -   Entity:
                 Id: c60e4867-fee6-43ba-ae5b-45f10cb5e65c
                 Name: World

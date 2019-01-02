@@ -5,12 +5,12 @@ namespace Torens.Game.Mesh
 {
     public static class Vector3Extensions
     {
-        public static Position ToPosition(this Vector3 value)
+        public static TilePosition ToPosition(this Vector3 value)
         {
-            return new Position((int)value.X, (int)value.Y, (int)value.Z);
+            return new TilePosition((int)value.X, (int)value.Y, (int)value.Z);
         }
 
-        public static Vector3 ToVector3(this Position value)
+        public static Vector3 ToVector3(this TilePosition value)
         {
             return new Vector3(value.Column, value.Layer, value.Row);
         }

@@ -1,4 +1,6 @@
+using System;
 using MediatR;
+using Torens.Application.Tiles.Queries;
 using Xenko.Core.Annotations;
 using Xenko.Engine;
 using Xenko.Extensions;
@@ -22,14 +24,18 @@ namespace Torens.Game
         protected override void OnEntityComponentAdding(Entity entity, [NotNull] ChunkComponent component, [NotNull] ChunkComponent data)
         {
             base.OnEntityComponentAdding(entity, component, data);
-
             var modelComponent = entity.GetOrCreate<ModelComponent>();
-            var model = GetModel();
+            throw new NotImplementedException();
 
-            modelComponent.Model = model;
+            //var tilesRequest = new GetTilesQuery(component.TilePosition);
+            //var tiles = _mediator.Send(tilesRequest).GetAwaiter().GetResult();
+            
+            //var model = GetModel(tiles);
+
+            //modelComponent.Model = model;
         }
 
-        private Model GetModel()
+        private Model GetModel(TileSet tiles)
         {
             var meshDraw = GeometricPrimitive.Cube.New(_graphicsDevice).ToMeshDraw();
             var mesh = new Xenko.Rendering.Mesh { Draw = meshDraw };

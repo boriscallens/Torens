@@ -25,11 +25,11 @@ namespace Torens.Application.Worlds.Queries
             var chunkPositions = from x in chunksRange
                                  from y in chunksRange
                                  from z in chunksRange
-                                 select new Position(x, 0, z);
+                                 select new ChunkPosition(x, 0, z);
             var tilesPositions = from x in tilesRange
                                  from y in tilesRange
                                  from z in tilesRange
-                                 select new Position(x, 0, z);
+                                 select new TilePosition(x, 0, z);
 
             var createChunksCommand = new CreateChunksCommand(chunkPositions.ToArray());
             var chunksViewModel = await _mediator.Send(createChunksCommand, cancellationToken);

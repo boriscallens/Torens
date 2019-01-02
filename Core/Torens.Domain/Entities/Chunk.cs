@@ -1,4 +1,6 @@
-﻿using Torens.Domain.ValueObjects;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Torens.Domain.ValueObjects;
 
 namespace Torens.Domain.Entities
 {
@@ -7,8 +9,17 @@ namespace Torens.Domain.Entities
     /// </summary>
     public class Chunk
     {
-        public Position Position { get; set; }
+        public const int Size = 16;
+        public ChunkPosition Position { get; }
 
-        public Chunk(Position position){}
+        public Chunk(ChunkPosition position)
+        {
+            Position = position;
+        }
+
+        public IEnumerable<TilePosition> GetTilePositions()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
