@@ -5,11 +5,16 @@ namespace Torens.Application.Tiles.Queries
 {
     public class TileSet : IList<Tile>
     {
-        private readonly IList<Tile> _listImplementation;
+        private readonly List<Tile> _listImplementation;
 
         public TileSet(IEnumerable<Tile> tileInfos)
         {
             _listImplementation = new List<Tile>(tileInfos);
+        }
+
+        public TileSet()
+        {
+            _listImplementation = new List<Tile>();
         }
 
         public IEnumerator<Tile> GetEnumerator()
@@ -48,8 +53,7 @@ namespace Torens.Application.Tiles.Queries
         }
 
         public int Count => _listImplementation.Count;
-
-        public bool IsReadOnly => _listImplementation.IsReadOnly;
+        public bool IsReadOnly => false;
 
         public int IndexOf(Tile item)
         {
@@ -70,6 +74,11 @@ namespace Torens.Application.Tiles.Queries
         {
             get => _listImplementation[index];
             set => _listImplementation[index] = value;
+        }
+
+        public void Add(TileSet tileSet)
+        {
+            _listImplementation.AddRange(tileSet);
         }
     }
 }

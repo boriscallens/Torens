@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using System.Linq;
 using MediatR;
 using Torens.Application.Tiles.Queries;
@@ -16,6 +16,9 @@ namespace Torens.Game
     {
         private IMediator _mediator;
         private GraphicsDevice _graphicsDevice;
+        private readonly TileSet _tiles = new TileSet();
+        private List<ModelComponent> _modelComponents = new List<ModelComponent>();
+        private bool _redraw;
 
         protected override void OnSystemAdd()
         {
@@ -26,16 +29,31 @@ namespace Torens.Game
         protected override void OnEntityComponentAdding(Entity entity, [NotNull] ChunkComponent component, [NotNull] ChunkComponent data)
         {
             base.OnEntityComponentAdding(entity, component, data);
-            var modelComponent = entity.GetOrCreate<ModelComponent>();
+            
 
             var chunk = new Chunk(component.OriginPosition);
             var tilesRequest = new GetTilesQuery(chunk.GetPositions().ToArray());
-            var tiles = _mediator.Send(tilesRequest).GetAwaiter().GetResult();
+            var tileSet = _mediator.Send(tilesRequest).GetAwaiter().GetResult();
+            _tiles.Add(tileSet);
 
-            modelComponent.Model = new Model();
+            // this is pretty shit. fix it
+            _modelComponents.Add(entity.GetOrCreate<ModelComponent>());
+            _redraw = true;
+        }
 
-            //var model = GetModel(tiles);
-            //modelComponent.Model = model;
+        public override void Draw(RenderContext context)
+        {
+            base.Draw(context);
+            if (!_redraw) return;
+
+            // djeezes :(
+            var modelComponent = _modelComponents.First();
+            foreach (var mc in _modelComponents.Skip(1))
+            {
+                mc.Enabled = false;
+            }
+
+            modelComponent.Model = GetModel(_tiles);
         }
 
         private Model GetModel(TileSet tiles)
