@@ -5,4 +5,8 @@
     <RuntimeIdentifier Condition="'$(TargetFramework)' == 'netcoreapp2.1'">linux-x64</RuntimeIdentifier>
     <RootNamespace>Torens.Domain</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Paravaly" Version="0.8.0" />
+  </ItemGroup>
 </Project>

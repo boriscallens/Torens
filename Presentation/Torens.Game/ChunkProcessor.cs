@@ -1,6 +1,8 @@
 using System;
+using System.Linq;
 using MediatR;
 using Torens.Application.Tiles.Queries;
+using Torens.Domain.Entities;
 using Xenko.Core.Annotations;
 using Xenko.Engine;
 using Xenko.Extensions;
@@ -25,13 +27,14 @@ namespace Torens.Game
         {
             base.OnEntityComponentAdding(entity, component, data);
             var modelComponent = entity.GetOrCreate<ModelComponent>();
-            throw new NotImplementedException();
 
-            //var tilesRequest = new GetTilesQuery(component.TilePosition);
-            //var tiles = _mediator.Send(tilesRequest).GetAwaiter().GetResult();
-            
+            var chunk = new Chunk(component.OriginPosition);
+            var tilesRequest = new GetTilesQuery(chunk.GetPositions().ToArray());
+            var tiles = _mediator.Send(tilesRequest).GetAwaiter().GetResult();
+
+            modelComponent.Model = new Model();
+
             //var model = GetModel(tiles);
-
             //modelComponent.Model = model;
         }
 

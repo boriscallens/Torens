@@ -12,8 +12,8 @@ namespace Torens.Domain.Entities
         {
             Seed = new Seed();
 
-            var position = ChunkPosition.Zero;
-            Chunks = new List<Chunk> {new Chunk(position)};
+            var origins = TilePosition.Zero;
+            Chunks = new List<Chunk> {new Chunk(origins)};
         }
     }
 }

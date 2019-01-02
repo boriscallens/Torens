@@ -15,7 +15,7 @@ namespace Torens.Application.Repositories
 
         public Task<List<Chunk>> AddChunks(CreateChunksCommand command, CancellationToken cancellationToken)
         {
-            var newChunks = command.ChunkPositions
+            var newChunks = command.ChunkOrigins
                 .Select(position => new Chunk(position))
                 .ToList();
 

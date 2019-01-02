@@ -13,7 +13,7 @@ namespace Torens.Infrastructure
         public static ContainerBuilder GetBuilder()
         {
             var applicationMarkerType = typeof(GetWorldQuery);
-            var domainMarkerType = typeof(GroundTypes);
+            var domainMarkerType = typeof(GroundType);
             var mediatrModule = new MediatrModule(applicationMarkerType);
             var loggingModule = new Log4NetModule();
 

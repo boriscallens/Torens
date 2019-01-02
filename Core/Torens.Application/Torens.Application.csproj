@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Enums.NET" Version="2.3.2" />
     <PackageReference Include="MediatR" Version="6.0.0" />
+    <PackageReference Include="Paravaly" Version="0.8.0" />
   </ItemGroup>
 
   <ItemGroup>

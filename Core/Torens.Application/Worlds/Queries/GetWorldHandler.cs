@@ -31,7 +31,7 @@ namespace Torens.Application.Worlds.Queries
                                  from z in tilesRange
                                  select new TilePosition(x, 0, z);
 
-            var createChunksCommand = new CreateChunksCommand(chunkPositions.ToArray());
+            var createChunksCommand = new CreateChunksCommand(null);
             var chunksViewModel = await _mediator.Send(createChunksCommand, cancellationToken);
 
             return new WorldViewModel

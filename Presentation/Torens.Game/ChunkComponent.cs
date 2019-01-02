@@ -10,6 +10,6 @@ namespace Torens.Game
     [Display("Chunk", Expand = ExpandRule.Once)]
     public class ChunkComponent : EntityComponent
     {
-        public ChunkPosition Position { get; set; } = ChunkPosition.Zero;
+        public TilePosition OriginPosition { get; set; } = TilePosition.Zero;
     }
 }

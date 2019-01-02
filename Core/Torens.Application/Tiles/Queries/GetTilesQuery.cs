@@ -8,7 +8,7 @@ namespace Torens.Application.Tiles.Queries
     {
         public IEnumerable<TilePosition> Positions { get; }
 
-        public GetTilesQuery(IEnumerable<TilePosition> positions)
+        public GetTilesQuery(params TilePosition[] positions)
         {
             Positions = positions;
         }
