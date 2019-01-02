@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Torens.Domain.ValueObjects;
 
 namespace Torens.Application.Tiles
@@ -7,7 +8,7 @@ namespace Torens.Application.Tiles
     {
         public IDictionary<TilePosition, GroundType> GetTileTypes(IEnumerable<TilePosition> positions)
         {
-            throw new System.NotImplementedException();
+            return positions.ToDictionary(pos => pos, pos => GroundType.Dirt);
         }
     }
 }
