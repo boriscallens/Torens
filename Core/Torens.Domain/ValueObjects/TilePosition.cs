@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Torens.Application.Tiles;
 
 namespace Torens.Domain.ValueObjects
 {
@@ -25,11 +24,11 @@ namespace Torens.Domain.ValueObjects
 
         public TilePosition Left()
         {
-            return new TilePosition(Column + 1, Layer, Row);
+            return new TilePosition(Column - 1, Layer, Row);
         }
         public TilePosition Right()
         {
-            return new TilePosition(Column - 1, Layer, Row);
+            return new TilePosition(Column + 1, Layer, Row);
         }
         public TilePosition Front()
         {

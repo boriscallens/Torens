@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using MediatR;
+﻿using MediatR;
 using Torens.Domain.ValueObjects;
 
 namespace Torens.Application.Chunks.Commands

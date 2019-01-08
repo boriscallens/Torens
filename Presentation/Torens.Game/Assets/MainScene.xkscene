@@ -74,18 +74,28 @@ Hierarchy:
         -   Folder: Chunks
             Entity:
                 Id: 300e7fec-ba65-451e-9146-5016553e4dee
-                Name: Chunk
+                Name: RightChunk
                 Components:
                     bf33a4a3d621527875d1956706ea8c17: !TransformComponent
                         Id: f7c9240c-7d37-4bea-a396-a81e15a899f9
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 1.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+                    637c98326cb82b5938227ef8be24c389: !ModelComponent
+                        Id: 8f05b3ed-f641-4a02-a4bb-ca8c76aa7442
+                        Model: null
+                        Materials: {}
+                    ab155bce207200aa2dab90bac85a0ea8: !ChunkComponent
+                        Id: ba8485ac-e818-4708-a386-ff56c27d7e9f
+                        OriginPosition:
+                            Column: 1
+                            Layer: 0
+                            Row: 0
         -   Folder: Chunks
             Entity:
                 Id: 4805bc05-6fe3-48b5-a274-e55f76876518
-                Name: Chunk
+                Name: LeftChunk
                 Components:
                     bf33a4a3d621527875d1956706ea8c17: !TransformComponent
                         Id: e6d83d87-e96a-4e17-bd0b-33cb1e57a1ef
@@ -99,6 +109,10 @@ Hierarchy:
                             Column: 0
                             Layer: 0
                             Row: 0
+                    3adcd64d8371690a7940189de8f4f88a: !ModelComponent
+                        Id: eaa2febf-a390-4a3d-b0fe-a3f2ef764c8d
+                        Model: null
+                        Materials: {}
         -   Entity:
                 Id: 49adb1ba-084f-4f81-b2eb-dff5825f5625
                 Name: Ground

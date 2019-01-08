@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Paravaly;
 using Torens.Domain.ValueObjects;
@@ -8,7 +9,7 @@ namespace Torens.Domain.Entities
     /// <summary>
     /// Holds a collection of tiles
     /// </summary>
-    public struct Chunk
+    public struct Chunk : IEquatable<Chunk>
     {
         private readonly int _columns;
         private readonly int _layers;
@@ -41,6 +42,32 @@ namespace Torens.Domain.Entities
                    from layer in Enumerable.Range(tmpThis.Origin.Layer, tmpThis._layers)
                    from row in Enumerable.Range(tmpThis.Origin.Row, tmpThis._rows)
                    select new TilePosition(column, layer, row);
+        }
+
+        public bool Equals(Chunk other)
+        {
+            return Origin.Equals(other.Origin);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            return obj is Chunk other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return Origin.GetHashCode();
+        }
+
+        public static bool operator ==(Chunk left, Chunk right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Chunk left, Chunk right)
+        {
+            return !left.Equals(right);
         }
     }
 }

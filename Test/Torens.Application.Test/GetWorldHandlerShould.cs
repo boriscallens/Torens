@@ -7,17 +7,17 @@ namespace Torens.Application.Test
 {
     public class GetWorldHandlerShould
     {
-        [Fact]
-        public async void ReturnWorld()
-        {
-            var mediatr = new MediatrBuilder().Build();
-            var qry = new GetWorldQuery();
-            var handler = new GetWorldHandler(mediatr);
+        //[Fact]
+        //public async void ReturnWorld()
+        //{
+        //    var mediatr = new MediatrBuilder().Build();
+        //    var qry = new GetWorldQuery();
+        //    var handler = new GetWorldHandler(mediatr);
 
-            var result = await handler.Handle(qry, CancellationToken.None);
+        //    var result = await handler.Handle(qry, CancellationToken.None);
 
-            Assert.IsType<WorldViewModel>(result);
-        }
+        //    Assert.IsType<WorldViewModel>(result);
+        //}
 
         //[Fact]
         //public void GenerateTilesAccordingToDimensions()

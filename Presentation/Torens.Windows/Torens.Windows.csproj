@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Torens.Game\Torens.Game.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Torens.Application.Tiles
+namespace Torens.Domain.ValueObjects
 {
     [Flags]
     public enum Direction : uint
