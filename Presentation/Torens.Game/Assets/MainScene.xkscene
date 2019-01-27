@@ -13,7 +13,7 @@ Hierarchy:
         - ref!! 108f32bc-98cf-44aa-a000-79172fb367de
         - ref!! c60e4867-fee6-43ba-ae5b-45f10cb5e65c
         - ref!! 4805bc05-6fe3-48b5-a274-e55f76876518
-        - ref!! 300e7fec-ba65-451e-9146-5016553e4dee
+        - ref!! e1ee0242-fab7-42c4-80f2-3c168a330738
     Parts:
         -   Entity:
                 Id: 01be698d-43e9-41d5-9fa6-fe991b1576e5
@@ -73,27 +73,6 @@ Hierarchy:
                         Intensity: 20.0
         -   Folder: Chunks
             Entity:
-                Id: 300e7fec-ba65-451e-9146-5016553e4dee
-                Name: RightChunk
-                Components:
-                    bf33a4a3d621527875d1956706ea8c17: !TransformComponent
-                        Id: f7c9240c-7d37-4bea-a396-a81e15a899f9
-                        Position: {X: 1.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    637c98326cb82b5938227ef8be24c389: !ModelComponent
-                        Id: 8f05b3ed-f641-4a02-a4bb-ca8c76aa7442
-                        Model: null
-                        Materials: {}
-                    ab155bce207200aa2dab90bac85a0ea8: !ChunkComponent
-                        Id: ba8485ac-e818-4708-a386-ff56c27d7e9f
-                        OriginPosition:
-                            Column: 1
-                            Layer: 0
-                            Row: 0
-        -   Folder: Chunks
-            Entity:
                 Id: 4805bc05-6fe3-48b5-a274-e55f76876518
                 Name: LeftChunk
                 Components:
@@ -103,12 +82,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    26378204a3df83d9e1719d87a587057b: !ChunkComponent
-                        Id: f8c0df29-5256-4a04-bc12-22ef46171802
-                        OriginPosition:
-                            Column: 0
-                            Layer: 0
-                            Row: 0
                     3adcd64d8371690a7940189de8f4f88a: !ModelComponent
                         Id: eaa2febf-a390-4a3d-b0fe-a3f2ef764c8d
                         Model: null
@@ -165,3 +138,18 @@ Hierarchy:
                         KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
                         MouseRotationSpeed: {X: 90.0, Y: 60.0}
                         TouchRotationSpeed: {X: 60.0, Y: 40.0}
+        -   Folder: Chunks
+            Entity:
+                Id: e1ee0242-fab7-42c4-80f2-3c168a330738
+                Name: RightChunk
+                Components:
+                    bf33a4a3d621527875d1956706ea8c17: !TransformComponent
+                        Id: cda7b768-71ad-453d-bebc-2f6c78b5733e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3adcd64d8371690a7940189de8f4f88a: !ModelComponent
+                        Id: 15f6d948-eb9a-45b0-97af-428eff0efda2
+                        Model: null
+                        Materials: {}

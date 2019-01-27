@@ -1,29 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Torens.Windows</RootNamespace>
-
     <OutputPath>..\Bin\Windows\$(Configuration)\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Xenko.Engine" Version="3.1.0.1-beta01-0318" />
+    <PackageReference Include="Xenko.Engine" Version="3.1.0.1-beta01-0406" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Torens.Infrastructure\Torens.Infrastructure.csproj" />
     <ProjectReference Include="..\Torens.Game\Torens.Game.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="Assets\" />
   </ItemGroup>
-
 </Project>

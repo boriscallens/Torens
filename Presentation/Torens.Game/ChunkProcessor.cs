@@ -27,7 +27,7 @@ namespace Torens.Game
 
         protected override TileSet GenerateComponentData(Entity entity, ChunkComponent component)
         {
-            var chunk = new Chunk(component.OriginPosition);
+            var chunk = new Chunk(component.OriginPosition.ToPosition());
             var tilesRequest = new GetTilesQuery(chunk.GetPositions().ToArray());
             return _mediator.Send(tilesRequest).GetAwaiter().GetResult();
         }

@@ -1,5 +1,6 @@
 ﻿using Torens.Domain.ValueObjects;
 using Xenko.Core;
+using Xenko.Core.Mathematics;
 using Xenko.Engine;
 using Xenko.Engine.Design;
 
@@ -10,6 +11,7 @@ namespace Torens.Game
     [Display("Chunk", Expand = ExpandRule.Once)]
     public class ChunkComponent : EntityComponent
     {
-        public TilePosition OriginPosition { get; set; } = TilePosition.Zero;
+        [DataMember(10)]
+        public Int3 OriginPosition { get; set; }
     }
 }

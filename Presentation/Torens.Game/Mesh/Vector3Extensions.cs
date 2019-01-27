@@ -14,5 +14,15 @@ namespace Torens.Game.Mesh
         {
             return new Vector3(value.Column, value.Layer, value.Row);
         }
+
+        public static TilePosition ToPosition(this Int3 value)
+        {
+            return new TilePosition(value.X, value.Y, value.Z);
+        }
+
+        public static Vector3 ToVector3(this Int3 value)
+        {
+            return new Vector3(value.X, value.Y, value.Z);
+        }
     }
 }
